@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class SimCalculator {
-	public int add(String numbers) {
+	public static int add(String numbers) {
 		if (numbers.isEmpty()) {
 			return 0;
 		}
@@ -28,6 +28,12 @@ public class SimCalculator {
 	public static void main(String[] args) {
 
 		// TODO Auto-generated method stub
+	try {
+		System.out.println(add("-1,2"));
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
 	}
 }
