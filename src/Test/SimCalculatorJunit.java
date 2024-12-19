@@ -38,4 +38,13 @@ class SimCalculatorJunit {
 		assertEquals(3, calculator.add("//;\n1;2"));
 	}
 
+	@Test
+	public void testAddWithNegativeNumbers() {
+		SimCalculator calculator = new SimCalculator();
+		Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+			calculator.add("1,-2,3");
+		});
+		assertTrue(exception.getMessage().contains("negative numbers not allowed"));
+	}
+
 }
