@@ -26,4 +26,11 @@ class SimCalculatorJunit {
 		assertEquals(6, calculator.add("1,5"));
 	}
 
+	@Test
+	public void testAddWithNewLines() {
+		SimCalculator calculator = new SimCalculator();
+		assertEquals(6, calculator.add("1\n2,3"));
+	}
+	
+
 }
