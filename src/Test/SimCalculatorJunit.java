@@ -31,6 +31,11 @@ class SimCalculatorJunit {
 		SimCalculator calculator = new SimCalculator();
 		assertEquals(6, calculator.add("1\n2,3"));
 	}
-	
+
+	@Test
+	public void testAddWithDifferentDelimiter() {
+		SimCalculator calculator = new SimCalculator();
+		assertEquals(3, calculator.add("//;\n1;2"));
+	}
 
 }
