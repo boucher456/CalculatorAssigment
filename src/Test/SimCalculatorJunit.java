@@ -14,4 +14,16 @@ class SimCalculatorJunit {
 		assertEquals(0, calculator.add(""));
 	}
 
+	@Test
+	public void testAddSingleNumber() {
+		SimCalculator calculator = new SimCalculator();
+		assertEquals(1, calculator.add("1"));
+	}
+
+	@Test
+	public void testAddTwoNumbers() {
+		SimCalculator calculator = new SimCalculator();
+		assertEquals(6, calculator.add("1,5"));
+	}
+
 }
